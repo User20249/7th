@@ -51,3 +51,4 @@ printf("\n b[%d] = %d",i,b[i]);
 printf("\n Page Fault = %d ",pf); 
 faults printf("\n Hit = %d ",h);
 printf("\n");
+}
