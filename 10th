@@ -1,0 +1,53 @@
+FIFO Page Replacement Algorithm
+#include <stdio.h>
+int a[100],b[100],i,n,z,f,j,pf,h,temp;
+void main(){
+printf("\nEnter the no. of pages : "); 
+referencing scanf("%d",&n);
+printf("\nEnter the size of frame : ");
+frames scanf("%d",&f);
+printf("\n Enter the pages value :\n");
+referencing for(i=0;i<n;i++){
+scanf("%d",&a[i]);
+}
+for(i=0;i<f;i++){
+b[i]=-1;
+}
+i=0;j=0;h=0;
+while(i<n){
+if(b[i]=-1 && i<f ){
+enquee b[i]=a[i];
+pf++;
+}
+else
+{
+z=0
+;
+for(j=0;j<f;j++){
+if(b[j]==a[i]){ 
+present h++; 
+}
+else{
+z++; 
+}
+}
+if(z==f){ 
+matched pf++; 
+for(j=0;j<f-1;j++){ 
+lO M oA R cP S D| 2 81 1 40 20
+temp=b[j];
+b[j]=b[j+1]; 
+b[j+1]=temp;
+}
+b[f-1]=a[i];
+}
+} 
+printf("\n Current Frame: %d \t %d \t %d \n",b[2],b[1],b[0]);
+i++;
+} 
+printf("\n frame at the end :");
+for(i=0;i<f;i++){
+printf("\n b[%d] = %d",i,b[i]);
+printf("\n Page Fault = %d ",pf); 
+faults printf("\n Hit = %d ",h);
+printf("\n");
